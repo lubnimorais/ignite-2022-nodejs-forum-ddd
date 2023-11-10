@@ -1,19 +1,19 @@
-import { randomUUID } from "node:crypto"
+import { randomUUID } from 'node:crypto';
 
 class UniqueEntityId {
-  private value: string
+  private value: string;
 
   toString() {
-    return this.value
+    return this.value;
   }
 
   toValue() {
-    return this.value
+    return this.value;
   }
 
   constructor(value?: string) {
-    this.value = value ?? randomUUID()
+    this.value = value ?? randomUUID();
   }
 }
 
-export { UniqueEntityId }
+export { UniqueEntityId };

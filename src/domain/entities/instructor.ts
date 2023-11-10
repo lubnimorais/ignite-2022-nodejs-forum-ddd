@@ -1,16 +1,16 @@
-import { Entity } from "@/core/entities/entity";
-import { UniqueEntityId } from "@/core/entities/unique-entity-id";
+import { Entity } from '@/core/entities/entity';
+import { UniqueEntityId } from '@/core/entities/unique-entity-id';
 
 interface InstructorProps {
-  name: string
+  name: string;
 }
 
 class Instructor extends Entity<InstructorProps> {
   static create(props: InstructorProps, id?: UniqueEntityId) {
-    const instructor = new Instructor(props, id)
+    const instructor = new Instructor(props, id);
 
-    return instructor
+    return instructor;
   }
 }
 
-export { Instructor }
+export { Instructor };

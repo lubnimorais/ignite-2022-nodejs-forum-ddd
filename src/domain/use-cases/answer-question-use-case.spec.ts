@@ -3,19 +3,19 @@ import { AnswersRepository } from '../repositories/answers-repository';
 import { Answer } from '../entities/answer';
 
 const fakeAnswersRepository: AnswersRepository = {
-  async create(answer: Answer): Promise<void> {
-    return
-  }
-} 
+  async create(answer: Answer): Promise<void> {},
+};
 
 test('create a answer', async () => {
-  const answerQuestionUseCase = new AnswerQuestionUseCase(fakeAnswersRepository)
+  const answerQuestionUseCase = new AnswerQuestionUseCase(
+    fakeAnswersRepository,
+  );
 
   const answer = await answerQuestionUseCase.execute({
     instructorId: '1',
     questionId: '1',
-    content: 'Nova resposta'
-  })
+    content: 'Nova resposta',
+  });
 
-  expect(answer.content).toEqual('Nova resposta')
-})
+  expect(answer.content).toEqual('Nova resposta');
+});

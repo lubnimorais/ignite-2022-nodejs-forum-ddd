@@ -2,14 +2,14 @@ class Slug {
   public value: string;
 
   constructor(value: string) {
-    this.value = value
+    this.value = value;
   }
 
   /**
    * Receives a string and normalizes it as a slug.
-   * 
+   *
    * Example: "An example title" => "an-example-title"
-   * 
+   *
    * @param text {string}
    */
   static createFromText(text: string) {
@@ -18,10 +18,10 @@ class Slug {
      * PADRONIZA A STRING REMOVENDO OU CONVERTENDO CARACTERES
      * QUE NÃO ESTEJAM DENTRO DE UM ARSENAL DE CARACTERES ACEITO
      * PARA UM CARACTER QUE SEJA ACEITO
-     * 
-     * VAI REMOVER QUALQUER TIPO DE ACENTUAÇÃO DA STRING 
-     *  
-    */ 
+     *
+     * VAI REMOVER QUALQUER TIPO DE ACENTUAÇÃO DA STRING
+     *
+     */
     const slugText = text
       .normalize('NFKD')
       .toLowerCase()
@@ -33,10 +33,10 @@ class Slug {
       .replace(/[^\w-]+/g, '')
       .replace(/_/g, '-')
       .replace(/--+/g, '-')
-      .replace(/-$/g, '')
+      .replace(/-$/g, '');
 
-    return new Slug(slugText)
+    return new Slug(slugText);
   }
 }
 
-export { Slug }
+export { Slug };
