@@ -2,6 +2,9 @@ import { Question } from '@/domain/forum/enterprise/entities/question';
 
 interface QuestionsRepository {
   create(question: Question): Promise<void>;
+  findBySlug(slug: string): Promise<Question | null>;
+  findById(questionId: string): Promise<Question | null>;
+  delete(question: Question): Promise<void>;
 }
 
 export { QuestionsRepository };

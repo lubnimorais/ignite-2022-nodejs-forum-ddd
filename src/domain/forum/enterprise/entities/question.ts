@@ -88,4 +88,4 @@ class Question extends Entity<QuestionProps> {
   }
 }
 
-export { Question };
+export { Question, QuestionProps };
