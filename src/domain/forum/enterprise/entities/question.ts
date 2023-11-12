@@ -15,6 +15,8 @@ interface QuestionProps {
 }
 
 class Question extends Entity<QuestionProps> {
+  getId() {}
+
   get authorId() {
     return this.props.authorId;
   }
@@ -78,8 +80,8 @@ class Question extends Entity<QuestionProps> {
     const question = new Question(
       {
         ...props,
-        slug: props.slug ?? new Slug(props.title),
-        createdAt: new Date(),
+        slug: props.slug ?? Slug.createFromText(props.title),
+        createdAt: props.createdAt ?? new Date(),
       },
       id,
     );
