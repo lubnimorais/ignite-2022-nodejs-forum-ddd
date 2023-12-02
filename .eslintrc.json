@@ -4,6 +4,7 @@
     "plugin:vitest-globals/recommended"
   ],
   "rules": {
+    "@typescript-eslint/ban-types": "off",
     "no-useless-constructor": "off",
     "prettier/prettier": ["error", {
       "printWidth": 80,
