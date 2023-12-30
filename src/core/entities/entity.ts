@@ -1,6 +1,6 @@
 import { UniqueEntityId } from './unique-entity-id';
 
-class Entity<Props> {
+abstract class Entity<Props> {
   private _id: UniqueEntityId;
   protected props: Props;
 
