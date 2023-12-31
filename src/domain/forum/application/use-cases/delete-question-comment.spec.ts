@@ -5,6 +5,7 @@ import { UniqueEntityId } from '@/core/entities/unique-entity-id';
 import { NotAllowedError } from './errors/not-allowed-error';
 
 let inMemoryQuestionCommentsRepository: InMemoryQuestionCommentsRepository;
+
 let sut: DeleteQuestionCommentUseCase;
 
 // sut => system under test
